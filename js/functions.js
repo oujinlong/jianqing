@@ -509,6 +509,9 @@ $(document).ready(function(){
     Press-test
      -----------------------------------------------------------*/
     let isPressing = false;
+
+
+
     (function(){
         $('body').on('click touchstart', '.press-test', function(e){
             e.preventDefault();
@@ -518,38 +521,59 @@ $(document).ready(function(){
                 alert('压力测试完成，系统运行正常!')
                 isPressing = false
             },20000)
+            let sec = Math.random() + 3;
+                sec =  sec.toFixed(4)
+           let time = '第5001次检测通过，耗时:' + sec + '秒';
+          setTimeout(function () {
+              (function() {
+                  var svgshape = document.getElementById( 'notification-shape' )
+                  var notification = new NotificationFx({
+                      wrapper : svgshape,
+                      message : time,
+                      layout : 'other',
+                      effect : 'loadingcircle',
+                      ttl : 9000,
+                      type : 'notice', // notice, warning or error
+
+                  });
+
+                  // show the notification
+                  notification.show();
+              })();
+          },16000)
+
 
                 //内存占用模拟
             setTimeout(function (){
-                $('.pie-1').data('easyPieChart').update(48);
+                $('.pie-1').data('easyPieChart').update(75);
                 setTimeout(function (){
-                    $('.pie-1').data('easyPieChart').update(50);
+                    $('.pie-1').data('easyPieChart').update(80);
                     setTimeout(function (){
-                        $('.pie-1').data('easyPieChart').update(55);
+                        $('.pie-1').data('easyPieChart').update(85);
                         setTimeout(function (){
-                            $('.pie-1').data('easyPieChart').update(60);
+                            $('.pie-1').data('easyPieChart').update(90);
                             setTimeout(function (){
-                                $('.pie-1').data('easyPieChart').update(62);
+                                $('.pie-1').data('easyPieChart').update(93);
                                 setTimeout(function (){
-                                    $('.pie-1').data('easyPieChart').update(65);
+                                    $('.pie-1').data('easyPieChart').update(80);
                                     setTimeout(function (){
-                                        $('.pie-1').data('easyPieChart').update(68);
+                                        $('.pie-1').data('easyPieChart').update(75);
                                         setTimeout(function (){
-                                            $('.pie-1').data('easyPieChart').update(77);
+                                            $('.pie-1').data('easyPieChart').update(59);
                                             setTimeout(function (){
                                                 $('.pie-1').data('easyPieChart').update(48);
                                                 setTimeout(function (){
-                                                    $('.pie-1').data('easyPieChart').update(44);
+                                                    $('.pie-1').data('easyPieChart').update(43);
 
                                                 }, 2400);
                                             }, 4500);
-                                        }, 4500);
-                                    }, 1500);
+                                        }, 1500);
+                                    }, 500);
                                 }, 1500);
-                            }, 2500);
-                        }, 2500);
-                    }, 2000);
-                }, 3500);
+                            }, 1500);
+                        }, 1500);
+                    }, 1000);
+                }, 1500);
             }, 200);
 
             //网络占用模拟

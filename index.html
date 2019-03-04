@@ -9,7 +9,9 @@
         <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
         <title>检清性能监控平台</title>
-            
+    <div class="notification-shape shape-progress" id="notification-shape">
+        <svg width="570px" height="570px"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+    </div>
         <!-- CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/animate.min.css" rel="stylesheet">
@@ -18,14 +20,21 @@
         <link href="css/calendar.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="css/generics.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-other.css" />
+    <script src="js/circle-alert/modernizr.custom.js"></script>
+    <script src="./js/circle-alert/classie.js"></script>
+    <script src="js/circle-alert/notificationFx.js"></script>
+
     </head>
     <body id="skin-blur-violate">
 
         <header id="header" class="media">
-            <a href="" id="menu-toggle"></a> 
+            <a href="" id="menu-toggle"></a>
             <a class="logo pull-left" href="index.html">检清性能监控平台</a>
-            
+
             <div class="media-body">
                 <div class="media" id="top-menu">
                     <div class="pull-left tm-icon">
@@ -43,7 +52,7 @@
                         </a>
                     </div>
 
-                    
+
 
                     <div id="time" class="pull-right">
                         <span id="hours"></span>
@@ -52,18 +61,18 @@
                         :
                         <span id="sec"></span>
                     </div>
-                    
+
                     <div class="media-body">
                         <input type="text" class="main-search">
                     </div>
                 </div>
             </div>
         </header>
-        
+
         <div class="clearfix"></div>
-        
+
         <section id="main" class="p-relative" role="main">
-            
+
             <!-- Sidebar -->
             <aside id="sidebar">
 
@@ -344,7 +353,7 @@
                 </ol>
                 
                 <h4 class="page-title">面板</h4>
-                                
+
                 <!-- Shortcuts -->
                 <div class="block-area shortcut-area">
                     <a class="shortcut tile" href="">
@@ -477,7 +486,7 @@
                                     </div>
                                     <div class="pie-chart-tiny pie-1" data-percent="55">
                                         <span class="percent"></span>
-                                        <span class="pie-title">内存占用</span>
+                                        <span class="pie-title">CPU占用</span>
                                     </div>
                                     <div class="pie-chart-tiny pie-2" data-percent="55">
                                         <span class="percent"></span>
@@ -564,7 +573,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Tasks to do -->
                                 <div class="col-md-6">
                                     <div class="tile">
